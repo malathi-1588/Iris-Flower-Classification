@@ -1,0 +1,134 @@
+<html>
+<body>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: url(https://wallpaperaccess.com/full/3224557.jpg);
+  background-repeat: no-repeat;
+}
+
+.signupSection {
+  background: url(https://wallpaperaccess.com/full/3224557.jpg);
+  background-repeat: no-repeat;
+  background-size: 900px 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1700px;
+  height: 600px;
+  text-align: center;
+  display: flex;
+  color: white;
+  box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, .5);
+}
+
+.info {
+  width: 100%;
+  background: rgba(20, 20, 20, .5);
+  background-size: 900px 600px;
+  padding: 180px 100px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+
+  h2 {
+    padding-top: 30px;
+    text-align: center;
+  }
+  p {
+    padding: 700px;
+    font-size: 18px;
+    font-align: center;
+    
+  }
+}
+
+.signupForm {
+  width: 180%;
+  padding: 40px 10px;
+  background: rgba(20, 20, 20, 0.5);
+  background-size: 900px 900px;
+  background-repeat: no-repeat
+  transition: .2s;
+  h2 {
+    font-weight: 300;
+  }
+}
+
+.inputFields {
+  margin: 15px 0;
+  font-size: 16px;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid rgba(10, 180, 180, 1);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: rgba(20, 20, 20, .2);
+  color: white;
+  outline: none;
+}
+
+.noBullet {
+  list-style-type: none;
+  padding: 0;
+}
+
+#submit-submit {
+  border: 1px solid rgba(10, 180, 180, 1);
+  background: rgba(20, 20, 20, .6);
+  font-size: 18px;
+  color: white;
+  margin-top: 20px;
+  padding: 10px 50px;
+  cursor: pointer;
+  transition: .4s;
+  &:hover {
+    background: rgba(20, 20, 20, .8);
+    padding: 10px 80px;
+  }
+}
+</style>
+
+<div class="signupSection">
+  <div class="info">
+    <h2>Iris Flower Classification</h2>
+    <i class="icon ion-ios-ionic-outline" aria-hidden="true"></i>
+    <p>Iris flower has three species; setosa, versicolor, and virginica, which differs according to their measurements. Fill in the measurements to find the flower.</p>
+  </div>
+  <form action="/predict" method="Post" class="signupForm" name="signupform">
+    <h2>Measurements</h2>
+    <ul class="noBullet">
+      <li>
+        <label>Sepal Length: </label>
+        <input type="text" class="inputFields" placeholder="Range: [4.3, 7.9]" name="sepalLength" required/>
+      </li>
+      <li>
+        <label>Sepal Width: </label>
+        <input type="text" class="inputFields" placeholder="Range: [2.3, 3.8]" name="sepalWidth" required/>
+      </li>
+      <li>
+        <label>Petal Length: </label>
+        <input type="text" class="inputFields" placeholder="Range: [1.0, 6.9]" name="petalLength" required/>
+      </li>
+	<li>
+        <label>Petal Width: </label>
+        <input type="text" class="inputFields" placeholder="Range: [0.1, 2.5]" name="petalWidth" required/>
+      </li>
+      <li id="center-submit">
+        <input type="Submit">
+      </li>
+    </ul>
+  </form>
+{{data}}
+</div>
+</body>
+<html>
